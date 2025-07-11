@@ -4,19 +4,17 @@ int swap(int arr[] , int n){
     int a=0;
     int b=n-1;
     while (a<=b){
-    swap(arr[a],arr[b]);
+          int c = arr[a];
+        arr[a] = arr[b];
+        arr[b] = c;
          a++;
-        b--;}
-     cout<<"reversed array: ";
+        b--;
+    }
     for(int i=0;i<n;i++){
-        cout<<arr[i]; 
-    }}
+        cout<<arr[i];
+    }cout<<endl;}
 int main(){
     int n = 5;
 int arr[]={1,2,3,4,5};
-cout<<"array elemnets: ";
- for(int i=0;i<n;i++){
-cout<<arr[i];
-}cout<<endl;
 int result=swap(arr,n);
 }
